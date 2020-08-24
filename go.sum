@@ -1,0 +1,10 @@
+github.com/chimera/go-inside v0.0.0-20131207030108-ea596fb9b370/go.mod h1:eYic+OGOZWo4SrDHYzfoquvCByFWLiq+n5eNJgzOq7I=
+github.com/elliotforbes/rs232-controller v0.0.0-20200713084642-d7cd4eb696d2 h1:vCvZDHDrrYcswOt2o2S0JSluG6i6LevIa0E2uwfUtx0=
+github.com/elliotforbes/rs232-controller v0.0.0-20200713084642-d7cd4eb696d2/go.mod h1:sP3wvZx4GQ64S0UGQ2OnkehcF8BMbfatTkcdmD0F5G0=
+github.com/kelvins/sunrisesunset v0.0.0-20170601204625-14f1915ad4b4/go.mod h1:3oZ7G+fb8Z8KF+KPHxeDO3GWpEjgvk/f+d/yaxmDRT4=
+github.com/nathan-osman/go-sunrise v0.0.0-20171121204956-7c449e7c690b h1:nWQAhkNZTyV8tfXIpwSGm97Pd0mM1y9tutJiyWoEhw0=
+github.com/nathan-osman/go-sunrise v0.0.0-20171121204956-7c449e7c690b/go.mod h1:kCE4+NvReDuwiJGk03l6QONGmYy805GQP3xGcCm8cBg=
+github.com/stianeikeland/go-rpio v1.0.0 h1:9a5DDConuUBSBR4mYsr9dV0uAxGypybCumg0KR2o3fc=
+github.com/stianeikeland/go-rpio v4.2.0+incompatible h1:CUOlIxdJdT+H1obJPsmg8byu7jMSECLfAN9zynm5QGo=
+github.com/stianeikeland/go-rpio/v4 v4.4.0 h1:LScvNyXHF412co42LG5t7bvBDbtDAhLF828ebaGqmjA=
+github.com/stianeikeland/go-rpio/v4 v4.4.0/go.mod h1:BkK52zk+FRk8wCTDf88/86Sojc+NfUiCAHd1ZV3RuTM=
