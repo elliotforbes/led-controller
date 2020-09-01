@@ -1,11 +1,15 @@
 LED Controller
 ===============
 
-Use:
+## Setup:
 
 ```
-$ git clone https://github.com/elliotforbes/led-controller
-$ cd led-controll
-$ python3 -m pip install astral
-$ python3 main.py
+$ git clone https://github.com/elliotforbes/led-controller.git
+
+$ sudo crontab -e
+
+# add this line to the bottom of the file
+@reboot bash /home/pi/led-controller/startup.sh >/home/pi/led-controller/logs.log 2>&1
+
+$ sudo reboot
 ```

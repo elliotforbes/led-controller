@@ -1,33 +1,34 @@
 import RPi.GPIO as GPIO
-from astral import LocationInfo
-from astral.sun import sun
 from datetime import datetime, timezone
 import time
+from suntime import Sun, SunTimeException
 
-def setup_astral():
-    city = LocationInfo("London", "England", "Europe/London", 51.5, -0.116)
-    return city
+latitude = 51.5074
+longitude = 0.1278
 
 def main():
     print("LED Controller Starting...")
 
-    city = setup_astral()
-    s = sun(city.observer, date=datetime.now())
+    sun = Sun(latitude, longitude)
 
-    print(s["sunrise"])
-    print(s["sunset"])
+    sunrise = sun.get_sunrise_time()
+    sunset = sun.get_sunset_time()
+
+    print(sunrise)
+    print(sunset)
 
     GPIO.setmode(GPIO.BCM)
     GPIO.setwarnings(False)
     GPIO.setup(18,GPIO.OUT)
-
+    GPIO.output(18,GPIO.HIGH)
     while True:
         t = datetime.now(timezone.utc)
-
-        if s["sunrise"] < t < s["sunset"]:
+        seven_am = datetime.datetime.now().replace(hour=7,minute=0,second=0,microsecond=0)
+        if seven_am < t < sunset:
             print("Time is greater than sunrise but less than sunset")
             GPIO.output(18,GPIO.LOW)
-        elif t < s["sunrise"] or t > s["sunset"]:
+        else:
+            print("Before Sunrise or after Sunset")
             GPIO.output(18,GPIO.HIGH)
 
         time.sleep(60)
