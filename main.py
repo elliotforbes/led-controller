@@ -27,10 +27,10 @@ def main():
         seven_am = datetime.now(timezone.utc).replace(hour=6,minute=0,second=0,microsecond=0)
         if seven_am < t < sunset:
             print("Time is greater than sunrise but less than sunset")
-            GPIO.output(18,GPIO.LOW)
+            GPIO.output(18,GPIO.HIGH)
         else:
             print("Before Sunrise or after Sunset")
-            GPIO.output(18,GPIO.HIGH)
+            GPIO.output(18,GPIO.LOW)
 
         time.sleep(60)
 
